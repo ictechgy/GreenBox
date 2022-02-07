@@ -13,9 +13,13 @@
 		C9A5105227B127E000153BDE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9A5105027B127E000153BDE /* Main.storyboard */; };
 		C9A5105427B127E100153BDE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9A5105327B127E100153BDE /* Assets.xcassets */; };
 		C9A5105727B127E100153BDE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9A5105527B127E100153BDE /* LaunchScreen.storyboard */; };
+		FE7DE1BAA88D15A320794AD6 /* Pods_GreenBox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B04F8E876692506E6B35E68F /* Pods_GreenBox.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4BB3ACF919AF27F0BD9E6F51 /* Pods-GreenBox.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GreenBox.release.xcconfig"; path = "Target Support Files/Pods-GreenBox/Pods-GreenBox.release.xcconfig"; sourceTree = "<group>"; };
+		B04F8E876692506E6B35E68F /* Pods_GreenBox.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GreenBox.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C75A9195F3F5012565F8F1B8 /* Pods-GreenBox.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GreenBox.debug.xcconfig"; path = "Target Support Files/Pods-GreenBox/Pods-GreenBox.debug.xcconfig"; sourceTree = "<group>"; };
 		C9A5104727B127E000153BDE /* GreenBox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GreenBox.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9A5104A27B127E000153BDE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C9A5104C27B127E000153BDE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -31,17 +35,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE7DE1BAA88D15A320794AD6 /* Pods_GreenBox.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		73EB042FD6A3A42C184BE50C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C75A9195F3F5012565F8F1B8 /* Pods-GreenBox.debug.xcconfig */,
+				4BB3ACF919AF27F0BD9E6F51 /* Pods-GreenBox.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		B0AA6DBB59730067A4E6CDEC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B04F8E876692506E6B35E68F /* Pods_GreenBox.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		C9A5103E27B127E000153BDE = {
 			isa = PBXGroup;
 			children = (
 				C9A5104927B127E000153BDE /* GreenBox */,
 				C9A5104827B127E000153BDE /* Products */,
+				73EB042FD6A3A42C184BE50C /* Pods */,
+				B0AA6DBB59730067A4E6CDEC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,6 +99,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C9A5105B27B127E100153BDE /* Build configuration list for PBXNativeTarget "GreenBox" */;
 			buildPhases = (
+				17DA449D2C59309C8C93AE38 /* [CP] Check Pods Manifest.lock */,
 				C9A5104327B127E000153BDE /* Sources */,
 				C9A5104427B127E000153BDE /* Frameworks */,
 				C9A5104527B127E000153BDE /* Resources */,
@@ -132,6 +158,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		17DA449D2C59309C8C93AE38 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GreenBox-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C9A5104327B127E000153BDE /* Sources */ = {
@@ -284,6 +335,7 @@
 		};
 		C9A5105C27B127E100153BDE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C75A9195F3F5012565F8F1B8 /* Pods-GreenBox.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -312,6 +364,7 @@
 		};
 		C9A5105D27B127E100153BDE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4BB3ACF919AF27F0BD9E6F51 /* Pods-GreenBox.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
