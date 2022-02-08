@@ -19,6 +19,7 @@
 /* Begin PBXFileReference section */
 		4BB3ACF919AF27F0BD9E6F51 /* Pods-GreenBox.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GreenBox.release.xcconfig"; path = "Target Support Files/Pods-GreenBox/Pods-GreenBox.release.xcconfig"; sourceTree = "<group>"; };
 		B04F8E876692506E6B35E68F /* Pods_GreenBox.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GreenBox.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C45BB87B27B245280037D7C8 /* Configurations.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Configurations.xcconfig; sourceTree = "<group>"; };
 		C75A9195F3F5012565F8F1B8 /* Pods-GreenBox.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GreenBox.debug.xcconfig"; path = "Target Support Files/Pods-GreenBox/Pods-GreenBox.debug.xcconfig"; sourceTree = "<group>"; };
 		C9A5104727B127E000153BDE /* GreenBox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GreenBox.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9A5104A27B127E000153BDE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -48,7 +49,6 @@
 				C75A9195F3F5012565F8F1B8 /* Pods-GreenBox.debug.xcconfig */,
 				4BB3ACF919AF27F0BD9E6F51 /* Pods-GreenBox.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -63,6 +63,7 @@
 		C9A5103E27B127E000153BDE = {
 			isa = PBXGroup;
 			children = (
+				C45BB87B27B245280037D7C8 /* Configurations.xcconfig */,
 				C9A5104927B127E000153BDE /* GreenBox */,
 				C9A5104827B127E000153BDE /* Products */,
 				73EB042FD6A3A42C184BE50C /* Pods */,
@@ -103,6 +104,7 @@
 				C9A5104327B127E000153BDE /* Sources */,
 				C9A5104427B127E000153BDE /* Frameworks */,
 				C9A5104527B127E000153BDE /* Resources */,
+				1DEAC002F2CE52BB0A5097E9 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -180,6 +182,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1DEAC002F2CE52BB0A5097E9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GreenBox/Pods-GreenBox-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GreenBox/Pods-GreenBox-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GreenBox/Pods-GreenBox-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
