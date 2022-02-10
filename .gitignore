@@ -139,3 +139,4 @@ iOSInjectionProject/
 
 ### Configurations ###
 *.xcconfig
+GoogleService*
