@@ -7,6 +7,12 @@ target 'GreenBox' do
   
   pod 'NMapsMap'
 
+  pod 'Firebase/Analytics'
+  pod 'Firebase/Firestore'
+  pod 'Firebase/Storage'
+
+  pod 'GeoFire/Utils'
+
   # Pods for GreenBox
 
 end
